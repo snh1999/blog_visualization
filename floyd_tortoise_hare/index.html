@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Sketch</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <script src="../libraries/p5.min.js"></script>
+        <script src="../libraries/p5.sound.min.js"></script>
+    </head>
+
+    <body>
+        <div id="controls" style="text-align: center">
+            <div style="margin: 10px; padding: 5px">
+                <label for="linearNodeCount">Linear Node Count:</label>
+                <input type="number" id="linearNodeCount" value="10" />
+
+                <label for="circularNodeCount">Circular Node Count:</label>
+                <input type="number" id="circularNodeCount" value="7" />
+            </div>
+            <div style="margin: 10px; padding: 5px">
+                <label for="hareColor">Hare Color:</label>
+                <input type="color" id="hareColor" value="#ff0000" />
+
+                <label for="tortoiseColor">Tortoise Color:</label>
+                <input type="color" id="tortoiseColor" value="#00ff00" />
+
+                <label for="turtleColor">Turtle Color:</label>
+                <input type="color" id="turtleColor" value="#0a0aff" />
+
+                <label for="nodeColor">Node Color:</label>
+                <input type="color" id="nodeColor" value="#326432" />
+
+                <label for="backgroundColor">Background Color:</label>
+                <input type="color" id="backgroundColor" value="#000000" />
+            </div>
+
+            <button onclick="restartSketch()">Restart Sketch</button>
+        </div>
+
+        <script src="sketch_linked.js"></script>
+    </body>
+    <script>
+        function loadScript(src) {
+            // creates a <script> tag and append it to the page
+            // this causes the script with given src to start loading and run when complete
+            let script = document.createElement("script");
+            script.src = src;
+            document.head.append(script);
+        }
+    </script>
+</html>
